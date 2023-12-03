@@ -79,7 +79,7 @@ t_stack	*handle_input(int argc, char *argv[])
 		stack_a = handle_str_input(argv[1]);
 	else if (argc > 2)
 		stack_a = handle_int_input(argc, argv);
-    if (!stack_a || check_dup(stack_a) == 0) // error checking
+    if (!stack_a || check_dup(stack_a) == 1) // error checking
     {
         free_stack(stack_a);
         handle_error();

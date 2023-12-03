@@ -4,9 +4,10 @@
 int	main(int argc, char *argv[])
 {
 	t_stack *stack_a;
-	
-	// fill stack_a with numbers from argv
+
 	stack_a = handle_input(argc, argv);
-	
+	if (stack_is_sorted(stack_a) == 0)
+		sort_stack(stack_a); // write sort_stack function
+	free_stack(stack_a);
 	return (0);
 }
