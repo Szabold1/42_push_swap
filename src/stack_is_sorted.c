@@ -5,6 +5,8 @@ int	stack_is_sorted(t_stack *stack)
 	t_stack	*curr;
 	t_stack	*next;
 
+	if (stack == NULL || stack->next == NULL)
+		return (1);
 	curr = stack;
 	while (curr->next)
 	{
