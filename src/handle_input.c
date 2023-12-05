@@ -23,7 +23,7 @@ static int	ft_atoi_2(const char *str)
 		num = num * 10 + (*str - 48);
 		str++;
 	}
-	if (num * sign > 2147483647 || num * sign < -2147483648) // check for overflow
+	if (num * sign > INT_MAX || num * sign < INT_MIN) // check for overflow
 		handle_error();
 	return (num * sign);
 }

@@ -8,7 +8,11 @@ t_stack	*stack_new_node(int num)
 	if (new_node == NULL)
 		handle_error();
 	new_node->num = num;
-	new_node->next = NULL;
+	new_node->index = INT_MAX;
+	new_node->price = INT_MAX;
+	new_node->above_middle = false;
+	new_node->target = NULL;
 	new_node->prev = NULL;
+	new_node->next = NULL;
 	return (new_node);
 }
