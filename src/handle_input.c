@@ -77,7 +77,9 @@ t_stack	*handle_input(int argc, char *argv[])
 	t_stack	*stack_a;
 
 	stack_a = NULL;
-	if (argc == 1 || (argc == 2 && argv[1][0] == '\0'))
+	if (argc == 1)
+		exit(1);
+	if ((argc == 2 && argv[1][0] == '\0'))
 		handle_error();
 	if (argc == 2)
 		stack_a = handle_str_input(argv[1]);
