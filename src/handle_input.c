@@ -1,6 +1,7 @@
 #include "../include/push_swap.h"
 
-static int	ft_atoi_2(const char *str)
+// convert string to int with error checking
+static int	atoi_2(const char *str)
 {
 	long long int	num;
 	int				sign;
@@ -28,6 +29,7 @@ static int	ft_atoi_2(const char *str)
 	return (num * sign);
 }
 
+// fill stack a if input is string
 static t_stack	*handle_str_input(char *str)
 {
 	int		i;
@@ -40,7 +42,7 @@ static t_stack	*handle_str_input(char *str)
 	tmp = ft_split(str, ' ');
 	while (tmp[i])
 	{
-		num = ft_atoi_2(tmp[i]);
+		num = atoi_2(tmp[i]);
 		stack_add_back(&stack_a, stack_new_node(num));
 		i++;
 	}
@@ -51,7 +53,8 @@ static t_stack	*handle_str_input(char *str)
 	return (stack_a);
 }
 
-t_stack *handle_int_input(int argc, char *argv[])
+// fill stack a if input is integer
+static t_stack *handle_int_input(int argc, char *argv[])
 {
     int i;
     int num;
@@ -68,6 +71,7 @@ t_stack *handle_int_input(int argc, char *argv[])
     return (stack_a);
 }
 
+// check for valid input and handle different cases
 t_stack	*handle_input(int argc, char *argv[])
 {
 	t_stack	*stack_a;
@@ -79,7 +83,7 @@ t_stack	*handle_input(int argc, char *argv[])
 		stack_a = handle_str_input(argv[1]);
 	else if (argc > 2)
 		stack_a = handle_int_input(argc, argv);
-    if (!stack_a || check_dup(stack_a) == 1) // error checking
+    if (!stack_a || check_dup(stack_a) == 1)
     {
         free_stack(stack_a);
         handle_error();

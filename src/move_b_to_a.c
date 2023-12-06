@@ -1,17 +1,20 @@
 #include "../include/push_swap.h"
 
+// set target for each node in stack b
+// target: the closest bigger number in stack a
+// if there's no bigger num, smallest num is the target
 static void	set_targets(t_stack *stack_a, t_stack *stack_b)
 {
 	t_stack	*curr_a;
 	t_stack	*target_node;
 	long	target_index;
 
-	while (stack_b) // for each node in stack b
+	while (stack_b)
 	{
 		curr_a = stack_a;
 		target_index = LONG_MAX;
 		target_node = NULL;
-		while (curr_a) // find the closest bigger number in stack a
+		while (curr_a)
 		{
 			if (curr_a->num > stack_b->num && curr_a->index < target_index)
 			{
@@ -28,6 +31,8 @@ static void	set_targets(t_stack *stack_a, t_stack *stack_b)
 	}
 }
 
+// calculate price for each node in stack b
+// price: number of steps before we can push the number back to stack a
 static void    calc_prices(t_stack *stack_a, t_stack *stack_b)
 {
 	int		stack_a_len;
@@ -51,6 +56,7 @@ static void    calc_prices(t_stack *stack_a, t_stack *stack_b)
 	}
 }
 
+// find and return the node with smallest price
 static t_stack	*cheapest_node(t_stack *stack)
 {
 	long	cheapest_price;
@@ -74,6 +80,7 @@ static t_stack	*cheapest_node(t_stack *stack)
 	return (cheapest_node);
 }
 
+// move back the elements from b to a in the right order
 void	move_b_to_a(t_stack **stack_a, t_stack **stack_b)
 {
 	while (*stack_b)

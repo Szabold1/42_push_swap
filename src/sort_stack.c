@@ -1,6 +1,7 @@
 #include "../include/push_swap.h"
 
-void    sort_three(t_stack **stack)
+// sort the 3 elements in the stack
+static void	sort_three(t_stack **stack)
 {
 	if ((*stack)->num > (*stack)->next->num)
 	{
@@ -26,6 +27,30 @@ void    sort_three(t_stack **stack)
 	}
 }
 
+// get smallest number to the top of the stack
+static void	rotate_final(t_stack **stack)
+{
+	t_stack	*min_node;
+	t_stack	*top_node;
+
+	if (stack == NULL)
+		return ;
+	set_node_indexes(*stack);
+	min_node = stack_get_min_node(*stack);
+	top_node = *stack;
+	while (top_node != min_node)
+	{
+		if (min_node->above_middle)
+			ra(stack);
+		else
+			rra(stack);
+	}
+}
+
+// sort the numbers in the stack
+// 1. if stack size is 2, swap the numbers
+// 2. if stack size is 3, sort the 3 numbers
+// 3. if stack size is more than 3, sort the numbers
 void	sort_stack(t_stack **stack_a)
 {
 	t_stack	*stack_b;
@@ -39,9 +64,10 @@ void	sort_stack(t_stack **stack_a)
 		sort_three(stack_a);
 	else
 	{
-		while (stack_a_size-- > 3) // move a to b until there are 3 elements in a
+		while (stack_a_size-- > 3)
 			pb(stack_a, &stack_b);
-		sort_three(stack_a); // sort the elements in a
-		move_b_to_a(stack_a, &stack_b); // move back the elements from b to a in the right order
+		sort_three(stack_a);
+		move_b_to_a(stack_a, &stack_b);
+		rotate_final(stack_a);
 	}
 }

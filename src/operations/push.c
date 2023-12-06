@@ -1,7 +1,7 @@
 #include "../../include/push_swap.h"
 
 // push the first node from stack_1 to stack_2
-void	push(t_stack **stack_1, t_stack **stack_2)
+static void	push(t_stack **stack_1, t_stack **stack_2)
 {
 	if (*stack_1 == NULL)
 		return ;

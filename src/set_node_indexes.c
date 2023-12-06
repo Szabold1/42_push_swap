@@ -1,5 +1,6 @@
 #include "../include/push_swap.h"
 
+// set indexes and above_middle for nodes in stack
 void	set_node_indexes(t_stack *stack)
 {
 	int	i;

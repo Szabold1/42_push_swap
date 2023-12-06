@@ -1,5 +1,6 @@
 #include "../include/push_swap.h"
 
+// add new node to end of stack
 void    stack_add_back(t_stack **stack, t_stack *new_node)
 {
 	t_stack	*curr;

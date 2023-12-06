@@ -1,6 +1,6 @@
 #include "../../include/push_swap.h"
 
-void swap_first_two(t_stack **stack)
+static void swap_first_two(t_stack **stack)
 {
 	t_stack	*first;
 	t_stack	*second;

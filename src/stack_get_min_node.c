@@ -1,5 +1,6 @@
 #include "../include/push_swap.h"
 
+// get node with the smallest number in the stack
 t_stack *stack_get_min_node(t_stack *stack)
 {
     t_stack *min_node;
