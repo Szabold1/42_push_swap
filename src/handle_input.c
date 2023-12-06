@@ -1,31 +1,29 @@
 #include "../include/push_swap.h"
 
-// convert string to int with error checking
-static int	atoi_2(const char *str)
+// convert string to number with error checking
+static int	str_to_num(const char *str)
 {
 	long long int	num;
 	int				sign;
 
 	num = 0;
 	sign = 1;
-	while (*str == 32 || (*str >= 9 && *str <= 13)) // skip whitespace
+	while (*str == 32 || (*str >= 9 && *str <= 13))
 		str++;
-	if ((*str == '-' || *str == '+') // handle + and - signs
+	if ((*str == '-' || *str == '+')
 		&& (*(str + 1) >= 48 && *(str + 1) <= 57))
 	{
 		if (*str == '-')
 			sign = -1;
 		str++;
 	}
-	while (*str) // convert string to int
+	while (*str)
 	{
-		if (!(*str >= 48 && *str <= 57)) // if not a digit
+		if (!(*str >= 48 && *str <= 57))
 			handle_error();
 		num = num * 10 + (*str - 48);
 		str++;
 	}
-	if (num * sign > INT_MAX || num * sign < INT_MIN) // check for overflow
-		handle_error();
 	return (num * sign);
 }
 
@@ -33,7 +31,7 @@ static int	atoi_2(const char *str)
 static t_stack	*handle_str_input(char *str)
 {
 	int		i;
-	int		num;
+	long	num;
 	char	**tmp;
 	t_stack	*stack_a;
 
@@ -42,14 +40,17 @@ static t_stack	*handle_str_input(char *str)
 	tmp = ft_split(str, ' ');
 	while (tmp[i])
 	{
-		num = atoi_2(tmp[i]);
+		num = str_to_num(tmp[i]);
+		if (num > INT_MAX || num < INT_MIN)
+		{
+			free_stack(stack_a);
+			free_str_arr(tmp);
+			handle_error();
+		}
 		stack_add_back(&stack_a, stack_new_node(num));
 		i++;
 	}
-	i = 0;
-	while (tmp[i])
-		free(tmp[i++]);
-	free(tmp);
+	free_str_arr(tmp);
 	return (stack_a);
 }
 
@@ -57,14 +58,19 @@ static t_stack	*handle_str_input(char *str)
 static t_stack *handle_int_input(int argc, char *argv[])
 {
     int i;
-    int num;
+    long num;
     t_stack *stack_a;
 
     i = 1;
     stack_a = NULL;
     while (i < argc)
     {
-        num = atoi_2(argv[i]);
+        num = str_to_num(argv[i]);
+		if (num > INT_MAX || num < INT_MIN)
+		{
+			free_stack(stack_a);
+			handle_error();
+		}
         stack_add_back(&stack_a, stack_new_node(num));
         i++;
     }
@@ -85,7 +91,7 @@ t_stack	*handle_input(int argc, char *argv[])
 		stack_a = handle_str_input(argv[1]);
 	else if (argc > 2)
 		stack_a = handle_int_input(argc, argv);
-    if (!stack_a || check_dup(stack_a) == 1)
+    if (!stack_a || has_duplicate(stack_a))
     {
         free_stack(stack_a);
         handle_error();

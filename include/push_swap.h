@@ -25,6 +25,7 @@ void	handle_error(void);
 
 // Free memory
 void	free_stack(t_stack *stack);
+void	free_str_arr(char **arr);
 
 // Stack operations
 void	pa(t_stack **stack_a, t_stack **stack_b);
@@ -40,7 +41,7 @@ void	sb(t_stack **stack);
 void	ss(t_stack **stack_a, t_stack **stack_b);
 
 // Other functions
-int		check_dup(t_stack *stack);
+bool	has_duplicate(t_stack *stack);
 char	**ft_split(char const *str, char c);
 t_stack	*handle_input(int argc, char *argv[]);
 void	move_b_to_a(t_stack **stack_a, t_stack **stack_b);

@@ -1,6 +1,6 @@
 #include "../include/push_swap.h"
 
-int	check_dup(t_stack *stack)
+bool	has_duplicate(t_stack *stack)
 {
 	t_stack *temp;
 
@@ -10,10 +10,10 @@ int	check_dup(t_stack *stack)
 		while (temp)
 		{
 			if (stack->num == temp->num)
-				return (1);
+				return (true);
 			temp = temp->next;
 		}
-	temp = temp->next;
+	stack = stack->next;
 	}
-	return (0);
+	return (false);
 }

@@ -4,19 +4,16 @@
 // The first element becomes the last one.
 static void	rotate(t_stack **stack)
 {
-	t_stack	*first;
 	t_stack	*last;
 
-	if (*stack == NULL || (*stack)->next == NULL)
+	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 		return ;
-	first = *stack;
 	last = stack_get_last_node(*stack);
-	// rotate the stack
-	*stack = first->next;
+	last->next = *stack;
+	*stack = (*stack)->next;
 	(*stack)->prev = NULL;
-	last->next = first;
-	first->prev = last;
-	first->next = NULL;
+	last->next->prev = last;
+	last->next->next = NULL;
 }
 
 // ra (rotate a): Shift up all elements of stack a by 1.

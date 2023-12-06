@@ -31,14 +31,12 @@ static void	sort_three(t_stack **stack)
 static void	rotate_final(t_stack **stack)
 {
 	t_stack	*min_node;
-	t_stack	*top_node;
 
 	if (stack == NULL)
 		return ;
 	set_node_indexes(*stack);
 	min_node = stack_get_min_node(*stack);
-	top_node = *stack;
-	while (top_node != min_node)
+	while (*stack != min_node)
 	{
 		if (min_node->above_middle)
 			ra(stack);

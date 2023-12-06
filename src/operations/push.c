@@ -1,16 +1,27 @@
 #include "../../include/push_swap.h"
 
-// push the first node from stack_1 to stack_2
-static void	push(t_stack **stack_1, t_stack **stack_2)
+// push the first node from src to dest
+static void	push(t_stack **src, t_stack **dest)
 {
-	if (*stack_1 == NULL)
+	t_stack	*node_to_push;
+
+	if (*src == NULL)
 		return ;
-	if ((*stack_1)->next)
-		(*stack_1)->next->prev = NULL;
-	(*stack_1)->next = *stack_2;
-	if ((*stack_2))
-		(*stack_2)->prev = *stack_1;
-	*stack_2 = *stack_1;
+	node_to_push = *src;
+	*src = (*src)->next;
+	if (*src)
+		(*src)->prev = NULL;
+	if (*dest == NULL)
+	{
+		*dest = node_to_push;
+		node_to_push->next = NULL;
+	}
+	else
+	{
+		node_to_push->next = *dest;
+		node_to_push->next->prev = node_to_push;
+		*dest = node_to_push;
+	}
 }
 
 // pa (push a): Take the first element at the top of b and put it at the top of a.

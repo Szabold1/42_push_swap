@@ -11,6 +11,7 @@ SRCS = $(SRCDIR)/operations/push.c \
 			$(SRCDIR)/operations/swap.c \
 			$(SRCDIR)/check_dup.c \
 			$(SRCDIR)/free_stack.c \
+			$(SRCDIR)/free_str_arr.c \
 			$(SRCDIR)/ft_split.c \
 			$(SRCDIR)/handle_error.c \
 			$(SRCDIR)/handle_input.c \
