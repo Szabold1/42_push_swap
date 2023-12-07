@@ -19,17 +19,17 @@ static void swap_first_two(t_stack **stack)
 
 // sa (swap a): Swap the first 2 elements at the top of stack a.
 // Do nothing if there is only one or no elements.
-void	sa(t_stack **stack)
+void	sa(t_stack **stack_a)
 {
-	swap_first_two(stack);
+	swap_first_two(stack_a);
 	write(1, "sa\n", 3);
 }
 
 // sb (swap b): Swap the first 2 elements at the top of stack b.
 // Do nothing if there is only one or no elements.
-void	sb(t_stack **stack)
+void	sb(t_stack **stack_b)
 {
-	swap_first_two(stack);
+	swap_first_two(stack_b);
 	write(1, "sb\n", 3);
 }
 

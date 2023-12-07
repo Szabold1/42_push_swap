@@ -1,7 +1,7 @@
 #include "../include/push_swap.h"
 
 // convert string to number with error checking
-static int	str_to_num(const char *str)
+static long	str_to_num(const char *str)
 {
 	long long int	num;
 	int				sign;

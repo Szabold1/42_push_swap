@@ -7,6 +7,7 @@
 # include <limits.h>
 # include <stdbool.h>
 # include <stdlib.h>
+#include <stdio.h>
 
 // Structure for node in stack
 typedef struct s_stack
@@ -51,6 +52,7 @@ void	set_node_indexes(t_stack *stack);
 void	sort_stack(t_stack **stack_a);
 void	stack_add_back(t_stack **stack, t_stack *new_node);
 t_stack	*stack_get_last_node(t_stack *stack);
+t_stack	*stack_get_max_node(t_stack *stack);
 t_stack	*stack_get_min_node(t_stack *stack);
 bool	stack_is_sorted(t_stack *stack);
 t_stack	*stack_new_node(int num);

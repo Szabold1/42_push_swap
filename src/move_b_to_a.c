@@ -16,9 +16,9 @@ static void	set_targets(t_stack *stack_a, t_stack *stack_b)
 		target_node = NULL;
 		while (curr_a)
 		{
-			if (curr_a->num > stack_b->num && curr_a->index < target_index)
+			if (curr_a->num > stack_b->num && curr_a->num < target_index)
 			{
-				target_index = curr_a->index;
+				target_index = curr_a->num;
 				target_node = curr_a;
 			}
 			curr_a = curr_a->next;

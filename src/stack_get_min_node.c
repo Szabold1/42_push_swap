@@ -10,7 +10,7 @@ t_stack *stack_get_min_node(t_stack *stack)
         return (NULL);
     min = stack->num;
     min_node = stack;
-    while (stack != NULL)
+    while (stack)
     {
         if (stack->num < min)
         {

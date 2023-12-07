@@ -22,6 +22,7 @@ SRCS = $(SRCDIR)/operations/push.c \
 			$(SRCDIR)/sort_stack.c \
 			$(SRCDIR)/stack_add_back.c \
 			$(SRCDIR)/stack_get_last_node.c \
+			$(SRCDIR)/stack_get_max_node.c \
 			$(SRCDIR)/stack_get_min_node.c \
 			$(SRCDIR)/stack_is_sorted.c \
 			$(SRCDIR)/stack_new_node.c \

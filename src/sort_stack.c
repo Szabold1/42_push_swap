@@ -1,30 +1,17 @@
 #include "../include/push_swap.h"
 
 // sort the 3 elements in the stack
-static void	sort_three(t_stack **stack)
+static void	sort_three(t_stack **stack_a)
 {
-	if ((*stack)->num > (*stack)->next->num)
-	{
-		if ((*stack)->num < (*stack)->next->next->num)
-			sa(stack);
-		else if ((*stack)->next->num < (*stack)->next->next->num)
-			ra(stack);
-		else
-		{
-			sa(stack);
-			rra(stack);
-		}
-	}
-	else
-	{
-		if ((*stack)->num > (*stack)->next->next->num)
-			rra(stack);
-		else
-		{
-			sa(stack);
-			ra(stack);
-		}
-	}
+	t_stack	*biggest;
+
+	biggest = stack_get_max_node(*stack_a);
+	if ((*stack_a)->num == biggest->num)
+		ra(stack_a);
+	else if ((*stack_a)->next->num == biggest->num)
+		rra(stack_a);
+	if ((*stack_a)->num > (*stack_a)->next->num)
+		sa(stack_a);
 }
 
 // get smallest number to the top of the stack
