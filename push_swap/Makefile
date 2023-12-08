@@ -1,9 +1,9 @@
 NAME = push_swap
 CC = cc
 RM = rm -f
-CFLAGS = -Wall -Wextra -Werror -I$(INCDIR)
 SRCDIR = src
 INCDIR = include
+CFLAGS = -Wall -Wextra -Werror -I$(INCDIR)
 
 SRCS = $(SRCDIR)/operations/push.c \
 			$(SRCDIR)/operations/reverse_rotate.c \
