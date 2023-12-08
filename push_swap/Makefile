@@ -28,21 +28,26 @@ SRCS = $(SRCDIR)/operations/push.c \
 			$(SRCDIR)/stack_new_node.c \
 			$(SRCDIR)/stack_size.c
 
-OBJS = ${SRCS:.c=.o}
+OBJS = $(SRCS:.c=.o)
 
 .c.o:
-	${CC} -c $< -o ${<:.c=.o}
+	$(CC) -c $< -o $(<:.c=.o)
 
-${NAME}: ${OBJS}
-	${CC} ${CFLAGS} ${OBJS} -o ${NAME}
+$(NAME): $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
-all: ${NAME}
+all: $(NAME)
+
+bonus: $(NAME)
+	cd ../checker && make
 
 clean:
-	${RM} ${OBJS}
+	$(RM) $(OBJS)
+	cd ../checker && make clean
 
 fclean: clean
-	${RM} ${NAME}
+	$(RM) $(NAME)
+	cd ../checker && make fclean
 
 re: fclean all
 
