@@ -1,7 +1,7 @@
 NAME = push_swap
 CC = cc
 RM = rm -f
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I$(INCDIR)
 SRCDIR = src
 INCDIR = include
 

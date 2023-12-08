@@ -7,15 +7,14 @@ static void	reverse_rotate(t_stack **stack)
 	t_stack	*first;
 	t_stack	*last;
 
-	if (*stack == NULL || (*stack)->next == NULL)
+	if (*stack == NULL || stack == NULL || (*stack)->next == NULL)
 		return ;
 	first = *stack;
 	last = stack_get_last_node(*stack);
-	// reverse rotate the stack
-	*stack = last;
-	last->next = first;
 	last->prev->next = NULL;
+	last->next = first;
 	last->prev = NULL;
+	*stack = last;
 	first->prev = last;
 }
 

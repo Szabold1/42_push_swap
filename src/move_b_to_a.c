@@ -7,23 +7,23 @@ static void	set_targets(t_stack *stack_a, t_stack *stack_b)
 {
 	t_stack	*curr_a;
 	t_stack	*target_node;
-	long	target_index;
+	long	target_num;
 
 	while (stack_b)
 	{
 		curr_a = stack_a;
-		target_index = LONG_MAX;
+		target_num = LONG_MAX;
 		target_node = NULL;
 		while (curr_a)
 		{
-			if (curr_a->num > stack_b->num && curr_a->num < target_index)
+			if (curr_a->num > stack_b->num && curr_a->num < target_num)
 			{
-				target_index = curr_a->num;
+				target_num = curr_a->num;
 				target_node = curr_a;
 			}
 			curr_a = curr_a->next;
 		}
-		if (target_index == LONG_MAX)
+		if (target_num == LONG_MAX)
 			stack_b->target = stack_get_min_node(stack_a);
 		else
 			stack_b->target = target_node;

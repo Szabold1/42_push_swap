@@ -4,13 +4,12 @@ static void swap_first_two(t_stack **stack)
 {
 	t_stack	*first;
 	t_stack	*second;
-	// stack is empty or it has only 1 element
 	if (*stack == NULL || (*stack)->next == NULL)
 		return ;
 	first = *stack;
 	second = first->next;
-	// swap first and second
 	first->next = second->next;
+	second->next->prev = first;
 	second->next = first;
 	first->prev = second;
 	second->prev = NULL;

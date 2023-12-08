@@ -7,7 +7,7 @@ void    stack_add_back(t_stack **stack, t_stack *new_node)
 
 	if (stack == NULL)
 		return ;
-	if (*stack == NULL) // if list is empty
+	if (*stack == NULL)
 	{
 		*stack = new_node;
 		new_node->prev = NULL;

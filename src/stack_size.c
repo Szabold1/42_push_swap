@@ -5,11 +5,13 @@ int	stack_size(t_stack *stack)
 {
 	int i;
 
+	if (stack == NULL)
+		return (0);
 	i = 0;
 	while (stack)
 	{
-		stack = stack->next;
 		i++;
+		stack = stack->next;
 	}
 	return (i);
 }
