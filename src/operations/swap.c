@@ -4,10 +4,22 @@ static void swap_first_two(t_stack **stack)
 {
 	t_stack	*first;
 	t_stack	*second;
+	int	len;
+	
+	len = stack_size(*stack);
 	if (*stack == NULL || (*stack)->next == NULL)
 		return ;
 	first = *stack;
 	second = first->next;
+	if (len == 2)
+	{
+		first->next = NULL;
+		first->prev = second;
+		second->next = first;
+		second->prev = NULL;
+		*stack = second;
+		return ;
+	}
 	first->next = second->next;
 	second->next->prev = first;
 	second->next = first;
