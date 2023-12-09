@@ -13,7 +13,7 @@
 #include "../include/checker.h"
 
 // read from fd into str until there is a new line
-char	*handle_read(int fd, char *str)
+static char	*handle_read(int fd, char *str)
 {
 	char	*temp;
 	int		bytes_read;
@@ -38,7 +38,7 @@ char	*handle_read(int fd, char *str)
 }
 
 // return a string until \n or end of string is reached
-char	*get_line(char *str)
+static char	*get_line(char *str)
 {
 	int		i;
 	char	*line;
@@ -64,7 +64,7 @@ char	*get_line(char *str)
 }
 
 // return the string after \n
-char	*handle_rest(char *str)
+static char	*handle_rest(char *str)
 {
 	int		i;
 	int		j;

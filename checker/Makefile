@@ -5,7 +5,9 @@ SRCDIR = src
 INCDIR = include
 CFLAGS = -Wall -Wextra -Werror -I$(INCDIR)
 
-SRCS = $(SRCDIR)/main.c
+SRCS = $(SRCDIR)/get_next_line_utils.c \
+		$(SRCDIR)/get_next_line.c \
+		$(SRCDIR)/main.c \
 
 OBJS = $(SRCS:.c=.o)
 

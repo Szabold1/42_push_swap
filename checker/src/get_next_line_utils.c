@@ -47,7 +47,7 @@ size_t	ft_strlen(const char *str)
 }
 
 // concatenate s1 and s2 into s_final
-char	*concat_strs(char *s1, char *s2, char *s_final)
+static char	*concat_strs(char *s1, char *s2, char *s_final)
 {
 	int	i;
 	int	j;
