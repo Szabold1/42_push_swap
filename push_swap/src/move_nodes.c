@@ -9,9 +9,9 @@ static void	rotate_to_top(t_stack **stack_a, t_stack **stack_b,
 			&& *stack_b != cheapest_node)
 		{
 			if (reverse)
-				rrr(stack_a, stack_b);
+				rrr(stack_a, stack_b, true);
 			else
-				rr(stack_a, stack_b);
+				rr(stack_a, stack_b, true);
 		}
 	set_node_indexes(*stack_a);
 	set_node_indexes(*stack_b);
@@ -27,16 +27,16 @@ static void	rotate_rest(t_stack **stack_a, t_stack **stack_b,
 	while (*stack_a != cheapest_node->target)
 	{
 		if (cheapest_node->target->above_middle)
-			ra(stack_a);
+			ra(stack_a, true);
 		else
-			rra(stack_a);
+			rra(stack_a, true);
 	}
 	while (*stack_b != cheapest_node)
 	{
 		if (cheapest_node->above_middle)
-			rb(stack_b);
+			rb(stack_b, true);
 		else
-			rrb(stack_b);
+			rrb(stack_b, true);
 	}
 }
 
@@ -53,5 +53,5 @@ void	move_nodes(t_stack **stack_a, t_stack **stack_b,
 			&& cheapest_node->target->above_middle == false)
 		rotate_to_top(stack_a, stack_b, cheapest_node, true);
 	rotate_rest(stack_a, stack_b, cheapest_node);
-	pa(stack_a, stack_b);
+	pa(stack_a, stack_b, true);
 }

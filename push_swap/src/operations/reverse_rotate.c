@@ -20,24 +20,27 @@ static void	reverse_rotate(t_stack **stack)
 
 // rra (reverse rotate a): Shift down all elements of stack a by 1.
 // The last element becomes the first one.
-void	rra(t_stack **stack_a)
+void	rra(t_stack **stack_a, bool output)
 {
 	reverse_rotate(stack_a);
-	write(1, "rra\n", 4);
+	if (output)
+		write(1, "rra\n", 4);
 }
 
 // rrb (reverse rotate b): Shift down all elements of stack b by 1.
 // The last element becomes the first one.
-void	rrb(t_stack **stack_b)
+void	rrb(t_stack **stack_b, bool output)
 {
 	reverse_rotate(stack_b);
-	write(1, "rrb\n", 4);
+	if (output)
+		write(1, "rrb\n", 4);
 }
 
 // rrr : rra and rrb at the same time.
-void	rrr(t_stack **stack_a, t_stack **stack_b)
+void	rrr(t_stack **stack_a, t_stack **stack_b, bool output)
 {
 	reverse_rotate(stack_a);
 	reverse_rotate(stack_b);
-	write(1, "rrr\n", 4);
+	if (output)
+		write(1, "rrr\n", 4);
 }

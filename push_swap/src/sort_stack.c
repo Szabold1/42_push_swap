@@ -7,11 +7,11 @@ static void	sort_three(t_stack **stack_a)
 
 	biggest = stack_get_max_node(*stack_a);
 	if ((*stack_a)->num == biggest->num)
-		ra(stack_a);
+		ra(stack_a, true);
 	else if ((*stack_a)->next->num == biggest->num)
-		rra(stack_a);
+		rra(stack_a, true);
 	if ((*stack_a)->num > (*stack_a)->next->num)
-		sa(stack_a);
+		sa(stack_a, true);
 }
 
 // get smallest number to the top of the stack
@@ -26,9 +26,9 @@ static void	rotate_final(t_stack **stack)
 	while (*stack != min_node)
 	{
 		if (min_node->above_middle)
-			ra(stack);
+			ra(stack, true);
 		else
-			rra(stack);
+			rra(stack, true);
 	}
 }
 
@@ -44,13 +44,13 @@ void	sort_stack(t_stack **stack_a)
 	stack_b = NULL;
 	stack_a_size = stack_size(*stack_a);
 	if (stack_size(*stack_a) == 2)
-		sa(stack_a);
+		sa(stack_a, true);
 	else if (stack_size(*stack_a) == 3)
 		sort_three(stack_a);
 	else
 	{
 		while (stack_a_size-- > 3)
-			pb(stack_a, &stack_b);
+			pb(stack_a, &stack_b, true);
 		sort_three(stack_a);
 		move_b_to_a(stack_a, &stack_b);
 		rotate_final(stack_a);

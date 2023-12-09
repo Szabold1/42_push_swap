@@ -43,7 +43,7 @@ static t_stack	*handle_str_input(char *str)
 		num = str_to_num(tmp[i]);
 		if (num > INT_MAX || num < INT_MIN)
 		{
-			free_stack(stack_a);
+			free_stack(&stack_a);
 			free_str_arr(tmp);
 			handle_error();
 		}
@@ -68,7 +68,7 @@ static t_stack *handle_int_input(int argc, char *argv[])
         num = str_to_num(argv[i]);
 		if (num > INT_MAX || num < INT_MIN)
 		{
-			free_stack(stack_a);
+			free_stack(&stack_a);
 			handle_error();
 		}
         stack_add_back(&stack_a, stack_new_node(num));
@@ -93,7 +93,7 @@ t_stack	*handle_input(int argc, char *argv[])
 		stack_a = handle_int_input(argc, argv);
     if (!stack_a || has_duplicate(stack_a))
     {
-        free_stack(stack_a);
+        free_stack(&stack_a);
         handle_error();
     }
 	return (stack_a);
