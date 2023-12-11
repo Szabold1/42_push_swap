@@ -1,53 +1,53 @@
 #include "../include/checker.h"
-
+ 
 static bool is_equal(char *s1, char *s2)
 {
 	int	i;
 
 	i = 0;
-	while (s1[i] && s2[i])
+	while (s1[i] || s2[i])
 	{
-		if (s1[i] != s2[i++])
+		if (s1[i] != s2[i])
 			return (false);
+		i++;
 	}
-	if (s1[i] != s2[i])
-		return (false);
 	return (true);
 }
 
-static void	handle_err(t_stack **stack_a, t_stack **stack_b)
+static void	handle_err(t_stack **stack_a, t_stack **stack_b, char *line)
 {
 	free_stack(stack_a);
 	free_stack(stack_b);
+	free(line);
 	handle_error();
 }
 
 static void	handle_operations(t_stack **stack_a, t_stack **stack_b, char *line)
 {
-	if (is_equal(line, "pa"))
+	if (is_equal(line, "pa\n"))
 		pa(stack_a, stack_b, false);
-	else if (is_equal(line, "pb"))
+	else if (is_equal(line, "pb\n"))
 		pb(stack_a, stack_b, false);
-	else if (is_equal(line, "rra"))
+	else if (is_equal(line, "rra\n"))
 		rra(stack_a, false);
-	else if (is_equal(line, "rrb"))
+	else if (is_equal(line, "rrb\n"))
 		rrb(stack_b, false);
-	else if (is_equal(line, "rrr"))
+	else if (is_equal(line, "rrr\n"))
 		rrr(stack_a, stack_b, false);
-	else if (is_equal(line, "ra"))
+	else if (is_equal(line, "ra\n"))
 		ra(stack_a, false);
-	else if (is_equal(line, "rb"))
+	else if (is_equal(line, "rb\n"))
 		rb(stack_b, false);
-	else if (is_equal(line, "rr"))
+	else if (is_equal(line, "rr\n"))
 		rr(stack_a, stack_b, false);
-	else if (is_equal(line, "sa"))
+	else if (is_equal(line, "sa\n"))
 		sa(stack_a, false);
-	else if (is_equal(line, "sb"))
+	else if (is_equal(line, "sb\n"))
 		sb(stack_b, false);
-	else if (is_equal(line, "ss"))
+	else if (is_equal(line, "ss\n"))
 		ss(stack_a, stack_b, false);
 	else
-		handle_err(stack_a, stack_b);
+		handle_err(stack_a, stack_b, line);
 }
 
 int	main(int argc, char *argv[])
@@ -64,6 +64,7 @@ int	main(int argc, char *argv[])
 	while (line)
 	{
 		handle_operations(&stack_a, &stack_b, line);
+		free(line);
 		line = get_next_line(0);
 	}
 	if (stack_is_sorted(stack_a) && stack_size(stack_a) == stack_len

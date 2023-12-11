@@ -7,4 +7,9 @@
 
 # include "../../push_swap/include/push_swap.h"
 
+char	*ft_strchr(const char *str, int c);
+size_t	ft_strlen(const char *str);
+char	*join_strs(char *s1, char *s2);
+char	*get_next_line(int fd);
+
 #endif

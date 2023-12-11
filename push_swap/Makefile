@@ -4,6 +4,7 @@ RM = rm -f
 SRCDIR = src
 INCDIR = include
 CFLAGS = -Wall -Wextra -Werror -I$(INCDIR)
+LIBRARY = libpush_swap.a
 
 SRCS = $(SRCDIR)/operations/push.c \
 			$(SRCDIR)/operations/reverse_rotate.c \
@@ -30,15 +31,18 @@ SRCS = $(SRCDIR)/operations/push.c \
 
 OBJS = $(SRCS:.c=.o)
 
-.c.o:
-	$(CC) -c $< -o $(<:.c=.o)
+%.o : %.c
+	$(CC) $(CFLAGS) -c $< -o $@ 
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	$(CC) $(OBJS) -o $(NAME)
 
 all: $(NAME)
 
-bonus: $(NAME)
+$(LIBRARY): $(OBJS)
+	ar rcs $(LIBRARY) $(OBJS)
+
+bonus: $(LIBRARY)
 	cd ../checker && make
 
 clean:
@@ -47,8 +51,9 @@ clean:
 
 fclean: clean
 	$(RM) $(NAME)
+	$(RM) $(LIBRARY)
 	cd ../checker && make fclean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
