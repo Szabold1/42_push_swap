@@ -78,6 +78,7 @@ static t_stack *handle_int_input(int argc, char *argv[])
 }
 
 // check for valid input and handle different cases
+// return stack with numbers from input, first input = first node
 t_stack	*handle_input(int argc, char *argv[])
 {
 	t_stack	*stack_a;
