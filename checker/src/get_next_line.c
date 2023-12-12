@@ -80,7 +80,10 @@ static char	*handle_rest(char *str)
 	}
 	rest = (char *)malloc(sizeof(char) * (ft_strlen(str) - i + 1));
 	if (!rest)
+	{
+		free(str);
 		return (NULL);
+	}
 	i++;
 	j = 0;
 	while (str[i])
