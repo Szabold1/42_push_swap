@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bszabo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/18 09:52:25 by bszabo            #+#    #+#             */
+/*   Updated: 2023/12/18 09:53:57 by bszabo           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/push_swap.h"
 
-// copies src string to dest string
+// copy src string to dest string
 static char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
@@ -15,7 +27,7 @@ static char	*ft_strcpy(char *dest, char *src)
 	return (dest);
 }
 
-// counts number of substrings
+// count number of substrings
 static int	count_substr(char const *str, char c)
 {
 	int	i;
@@ -37,7 +49,7 @@ static int	count_substr(char const *str, char c)
 	return (count);
 }
 
-// frees strings array if malloc fails
+// free strings array if malloc fails
 static int	handle_err(int str_index, char **strings)
 {
 	if (strings[str_index] == NULL)
@@ -50,7 +62,7 @@ static int	handle_err(int str_index, char **strings)
 	return (1);
 }
 
-// fills strings array with substrings
+// fill strings array with substrings
 static int	handle_substr(char const *str, char c, char **strings)
 {
 	int		i;
@@ -80,7 +92,7 @@ static int	handle_substr(char const *str, char c, char **strings)
 	return (1);
 }
 
-// splits string into substrings using char c as delimiter
+// split string into substrings using char c as delimiter
 char	**ft_split(char const *str, char c)
 {
 	char	**strings;

@@ -1,11 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   swap.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bszabo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/18 09:44:18 by bszabo            #+#    #+#             */
+/*   Updated: 2023/12/18 09:47:30 by bszabo           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../include/push_swap.h"
 
-static void swap_first_two(t_stack **stack)
+// swap the first two elements at the top of the stack
+static void	swap_first_two(t_stack **stack)
 {
 	t_stack	*first;
 	t_stack	*second;
-	int	len;
-	
+	int		len;
+
 	len = stack_size(*stack);
 	if (*stack == NULL || (*stack)->next == NULL)
 		return ;
@@ -28,7 +41,7 @@ static void swap_first_two(t_stack **stack)
 	*stack = second;
 }
 
-// sa (swap a): Swap the first 2 elements at the top of stack a.
+// sa (swap a): Swap the first two elements at the top of stack a.
 // Do nothing if there is only one or no elements.
 void	sa(t_stack **stack_a, bool output)
 {
@@ -37,7 +50,7 @@ void	sa(t_stack **stack_a, bool output)
 		write(1, "sa\n", 3);
 }
 
-// sb (swap b): Swap the first 2 elements at the top of stack b.
+// sb (swap b): Swap the first two elements at the top of stack b.
 // Do nothing if there is only one or no elements.
 void	sb(t_stack **stack_b, bool output)
 {

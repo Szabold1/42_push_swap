@@ -1,6 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bszabo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/18 12:55:32 by bszabo            #+#    #+#             */
+/*   Updated: 2023/12/18 13:06:30 by bszabo           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/checker.h"
- 
-static bool is_equal(char *s1, char *s2)
+
+// compare s1 and s2, return true if they are the same
+static bool	is_equal(char *s1, char *s2)
 {
 	int	i;
 
@@ -14,6 +27,7 @@ static bool is_equal(char *s1, char *s2)
 	return (true);
 }
 
+// handle error if line is not a valid operation
 static void	handle_err(t_stack **stack_a, t_stack **stack_b, char *line)
 {
 	free_stack(stack_a);
@@ -22,6 +36,7 @@ static void	handle_err(t_stack **stack_a, t_stack **stack_b, char *line)
 	handle_error();
 }
 
+// compare the line with valid operations
 static void	handle_operations(t_stack **stack_a, t_stack **stack_b, char *line)
 {
 	if (is_equal(line, "pa\n"))
@@ -50,6 +65,10 @@ static void	handle_operations(t_stack **stack_a, t_stack **stack_b, char *line)
 		handle_err(stack_a, stack_b, line);
 }
 
+// 1. fill stack a with numbers from input
+// 2. while there is a next line from input,
+// check if it is a valid operation and handle it
+// 3. check if stack is sorted at the end and free it
 int	main(int argc, char *argv[])
 {
 	int		stack_len;

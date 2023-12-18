@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bszabo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/18 09:37:50 by bszabo            #+#    #+#             */
+/*   Updated: 2023/12/18 09:38:54 by bszabo           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
@@ -46,7 +58,7 @@ char	**ft_split(char const *str, char c);
 t_stack	*handle_input(int argc, char *argv[]);
 void	move_b_to_a(t_stack **stack_a, t_stack **stack_b);
 void	move_nodes(t_stack **stack_a, t_stack **stack_b,
-					t_stack *cheapest_node);
+			t_stack *cheapest_node);
 void	set_node_indexes(t_stack *stack);
 void	sort_stack(t_stack **stack_a);
 void	stack_add_back(t_stack **stack, t_stack *new_node);

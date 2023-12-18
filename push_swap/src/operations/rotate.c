@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rotate.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bszabo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/18 09:43:21 by bszabo            #+#    #+#             */
+/*   Updated: 2023/12/18 09:43:51 by bszabo           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../include/push_swap.h"
 
-// Shift up all elements of the stack by 1.
+// Shift up all elements of the stack by one
 // The first element becomes the last one.
 static void	rotate(t_stack **stack)
 {
@@ -16,7 +28,7 @@ static void	rotate(t_stack **stack)
 	last->next->next = NULL;
 }
 
-// ra (rotate a): Shift up all elements of stack a by 1.
+// ra (rotate a): Shift up all elements of stack a by one
 // The first element becomes the last one.
 void	ra(t_stack **stack_a, bool output)
 {
@@ -25,7 +37,7 @@ void	ra(t_stack **stack_a, bool output)
 		write(1, "ra\n", 3);
 }
 
-// rb (rotate b): Shift up all elements of stack b by 1.
+// rb (rotate b): Shift up all elements of stack b by one
 // The first element becomes the last one.
 void	rb(t_stack **stack_b, bool output)
 {

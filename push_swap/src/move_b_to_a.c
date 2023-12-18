@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   move_b_to_a.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bszabo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/18 10:01:12 by bszabo            #+#    #+#             */
+/*   Updated: 2023/12/18 10:03:05 by bszabo           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/push_swap.h"
 
 // set target for each node in stack b
@@ -33,7 +45,7 @@ static void	set_targets(t_stack *stack_a, t_stack *stack_b)
 
 // calculate price for each node in stack b
 // price: number of steps before we can push the number back to stack a
-static void    calc_prices(t_stack *stack_a, t_stack *stack_b)
+static void	calc_prices(t_stack *stack_a, t_stack *stack_b)
 {
 	int		stack_a_len;
 	int		stack_b_len;
@@ -64,7 +76,7 @@ static t_stack	*cheapest_node(t_stack *stack)
 	t_stack	*curr;
 
 	if (stack == NULL)
-		return NULL;
+		return (NULL);
 	cheapest_price = LONG_MAX;
 	cheapest_node = NULL;
 	curr = stack;

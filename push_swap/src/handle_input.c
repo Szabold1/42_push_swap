@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   handle_input.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bszabo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/18 09:55:02 by bszabo            #+#    #+#             */
+/*   Updated: 2023/12/18 09:58:59 by bszabo           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/push_swap.h"
 
 // convert string to number with error checking
@@ -55,26 +67,26 @@ static t_stack	*handle_str_input(char *str)
 }
 
 // fill stack a if input is integer
-static t_stack *handle_int_input(int argc, char *argv[])
+static t_stack	*handle_int_input(int argc, char *argv[])
 {
-    int i;
-    long num;
-    t_stack *stack_a;
+	int		i;
+	long	num;
+	t_stack	*stack_a;
 
-    i = 1;
-    stack_a = NULL;
-    while (i < argc)
-    {
-        num = str_to_num(argv[i]);
+	i = 1;
+	stack_a = NULL;
+	while (i < argc)
+	{
+		num = str_to_num(argv[i]);
 		if (num > INT_MAX || num < INT_MIN)
 		{
 			free_stack(&stack_a);
 			handle_error();
 		}
-        stack_add_back(&stack_a, stack_new_node(num));
-        i++;
-    }
-    return (stack_a);
+		stack_add_back(&stack_a, stack_new_node(num));
+		i++;
+	}
+	return (stack_a);
 }
 
 // check for valid input and handle different cases
@@ -92,10 +104,10 @@ t_stack	*handle_input(int argc, char *argv[])
 		stack_a = handle_str_input(argv[1]);
 	else if (argc > 2)
 		stack_a = handle_int_input(argc, argv);
-    if (!stack_a || has_duplicate(stack_a))
-    {
-        free_stack(&stack_a);
-        handle_error();
-    }
+	if (!stack_a || has_duplicate(stack_a))
+	{
+		free_stack(&stack_a);
+		handle_error();
+	}
 	return (stack_a);
 }

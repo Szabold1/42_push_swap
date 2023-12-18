@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_stack.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bszabo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/18 10:06:13 by bszabo            #+#    #+#             */
+/*   Updated: 2023/12/18 10:07:27 by bszabo           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../include/push_swap.h"
 
-// sort the 3 elements in the stack
+// sort the three elements in the stack
 static void	sort_three(t_stack **stack_a)
 {
 	t_stack	*biggest;
@@ -33,9 +45,9 @@ static void	rotate_final(t_stack **stack)
 }
 
 // sort the numbers in the stack
-// 1. if stack size is 2, swap the numbers
-// 2. if stack size is 3, sort the 3 numbers
-// 3. if stack size is more than 3, sort the numbers
+// 1. if stack size is two, swap the numbers
+// 2. if stack size is three, sort the three numbers
+// 3. if stack size is more than three, sort the numbers
 void	sort_stack(t_stack **stack_a)
 {
 	t_stack	*stack_b;

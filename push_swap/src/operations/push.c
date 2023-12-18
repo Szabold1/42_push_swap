@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bszabo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/12/18 09:39:57 by bszabo            #+#    #+#             */
+/*   Updated: 2023/12/18 09:41:19 by bszabo           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../include/push_swap.h"
 
 // push the first node from src to dest
@@ -24,7 +36,7 @@ static void	push(t_stack **src, t_stack **dest)
 	}
 }
 
-// pa (push a): Take the first element at the top of b and put it at the top of a.
+// pa (push a): Take the first element at top of b and put it at top of a.
 // Do nothing if b is empty.
 void	pa(t_stack **stack_a, t_stack **stack_b, bool output)
 {
@@ -33,7 +45,7 @@ void	pa(t_stack **stack_a, t_stack **stack_b, bool output)
 		write(1, "pa\n", 3);
 }
 
-// pb (push b): Take the first element at the top of a and put it at the top of b.
+// pb (push b): Take the first element at top of a and put it at top of b.
 // Do nothing if a is empty
 void	pb(t_stack **stack_a, t_stack **stack_b, bool output)
 {
