@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   stack_is_sorted.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bszabo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: bszabo <bszabo@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 10:26:05 by bszabo            #+#    #+#             */
 /*   Updated: 2023/12/18 10:26:24 by bszabo           ###   ########.fr       */

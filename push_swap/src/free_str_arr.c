@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   free_str_arr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bszabo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: bszabo <bszabo@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 09:51:28 by bszabo            #+#    #+#             */
 /*   Updated: 2023/12/18 09:51:59 by bszabo           ###   ########.fr       */

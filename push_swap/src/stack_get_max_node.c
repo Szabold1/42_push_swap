@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   stack_get_max_node.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bszabo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: bszabo <bszabo@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 10:17:37 by bszabo            #+#    #+#             */
 /*   Updated: 2023/12/18 10:20:35 by bszabo           ###   ########.fr       */

@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   move_b_to_a.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bszabo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: bszabo <bszabo@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 10:01:12 by bszabo            #+#    #+#             */
 /*   Updated: 2023/12/18 10:03:05 by bszabo           ###   ########.fr       */

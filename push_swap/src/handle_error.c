@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   handle_error.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bszabo <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: bszabo <bszabo@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 09:54:25 by bszabo            #+#    #+#             */
 /*   Updated: 2023/12/18 09:54:34 by bszabo           ###   ########.fr       */
@@ -15,5 +15,5 @@
 void	handle_error(void)
 {
 	write(2, "Error\n", 6);
-	exit(1);
+	exit(EXIT_FAILURE);
 }
