@@ -31,7 +31,7 @@ static long	str_to_num(const char *str)
 	}
 	while (*str)
 	{
-		if (!(*str >= 48 && *str <= 57))
+		if (!(*str >= 48 && *str <= 57) || num == 1844674407370955161)
 			handle_error();
 		num = num * 10 + (*str - 48);
 		str++;
@@ -50,6 +50,8 @@ static t_stack	*handle_str_input(char *str)
 	i = 0;
 	stack_a = NULL;
 	tmp = ft_split(str, ' ');
+	if (tmp == NULL)
+		handle_error();
 	while (tmp[i])
 	{
 		num = str_to_num(tmp[i]);
@@ -78,7 +80,7 @@ static t_stack	*handle_int_input(int argc, char *argv[])
 	while (i < argc)
 	{
 		num = str_to_num(argv[i]);
-		if (num > INT_MAX || num < INT_MIN)
+		if (num > INT_MAX || num < INT_MIN || *(argv[i]) == '\0')
 		{
 			free_stack(&stack_a);
 			handle_error();
