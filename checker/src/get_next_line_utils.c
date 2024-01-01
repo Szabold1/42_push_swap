@@ -76,7 +76,7 @@ char	*join_strs(char *s1, char *s2)
 	}
 	if (!s2)
 		return (NULL);
-	s_final = (char *)malloc((int)(ft_strlen(s1) + ft_strlen(s2)) + 1);
+	s_final = (char *)malloc((ft_strlen(s1) + ft_strlen(s2)) + 1);
 	if (s_final == NULL)
 	{
 		free(s1);

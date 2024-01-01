@@ -110,15 +110,7 @@ char	*get_next_line(int fd)
 		return (NULL);
 	line = get_line(str);
 	if (!line)
-	{
-		free(str);
 		return (NULL);
-	}
 	str = handle_rest(str);
-	if (!str)
-	{
-		free(line);
-		return (NULL);
-	}
 	return (line);
 }
