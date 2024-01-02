@@ -1,5 +1,6 @@
 # 42_push_swap
 
+## Introduction
 - This project is a very simple and a highly straightforward algorithm project: data must be sorted.
 - You have at your disposal a set of integer values, 2 stacks, and a set of instructions to manipulate both stacks.
 - Your goal? Write a program in C called push_swap which calculates and displays on the standard output the smallest program, made of Push swap language instructions, that sorts the integers received as arguments.
@@ -21,9 +22,7 @@
   - rrb (reverse rotate b): Shift down all elements of stack 'b' by 1, the last element becomes the first one.
   - rrr : rra and rrb at the same time.
 
-
-# Bonus
-
+## Bonus
 * Write a program named checker that takes as an argument the stack 'a' formatted as a list of integers.
 * If no argument is given, it stops and displays nothing. It will then wait and read instructions on the standard input, each instruction will be followed by ’\n’.
 * Once all the instructions have been read, the program has to execute them on the stack received as an argument.
