@@ -6,30 +6,30 @@ INCDIR = include
 CFLAGS = -Wall -Wextra -Werror -I$(INCDIR)
 LIBRARY = libpush_swap.a
 
-SRCS = $(SRCDIR)/operations/push.c \
-			$(SRCDIR)/operations/reverse_rotate.c \
-			$(SRCDIR)/operations/rotate.c \
-			$(SRCDIR)/operations/swap.c \
-			$(SRCDIR)/check_dup.c \
-			$(SRCDIR)/free_stack.c \
-			$(SRCDIR)/free_str_arr.c \
-			$(SRCDIR)/ft_split.c \
-			$(SRCDIR)/handle_error.c \
-			$(SRCDIR)/handle_input.c \
-			$(SRCDIR)/main.c \
-			$(SRCDIR)/move_b_to_a.c \
-			$(SRCDIR)/move_nodes.c \
-			$(SRCDIR)/set_node_indexes.c \
-			$(SRCDIR)/sort_stack.c \
-			$(SRCDIR)/stack_add_back.c \
-			$(SRCDIR)/stack_get_last_node.c \
-			$(SRCDIR)/stack_get_max_node.c \
-			$(SRCDIR)/stack_get_min_node.c \
-			$(SRCDIR)/stack_is_sorted.c \
-			$(SRCDIR)/stack_new_node.c \
-			$(SRCDIR)/stack_size.c
+SRC = operations/push.c \
+			operations/reverse_rotate.c \
+			operations/rotate.c \
+			operations/swap.c \
+			check_dup.c \
+			free_stack.c \
+			free_str_arr.c \
+			ft_split.c \
+			handle_error.c \
+			handle_input.c \
+			main.c \
+			move_b_to_a.c \
+			move_nodes.c \
+			set_node_indexes.c \
+			sort_stack.c \
+			stack_add_back.c \
+			stack_get_last_node.c \
+			stack_get_max_node.c \
+			stack_get_min_node.c \
+			stack_is_sorted.c \
+			stack_new_node.c \
+			stack_size.c
 
-OBJS = $(SRCS:.c=.o)
+OBJS = $(SRC:%.c=$(SRCDIR)/%.o)
 
 %.o : %.c
 	$(CC) $(CFLAGS) -c $< -o $@ 
