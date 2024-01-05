@@ -20,10 +20,10 @@ static long	str_to_num(const char *str)
 
 	num = 0;
 	sign = 1;
-	while (*str == 32 || (*str >= 9 && *str <= 13))
+	while (*str == ' ' || (*str >= 9 && *str <= 13))
 		str++;
 	if ((*str == '-' || *str == '+')
-		&& (*(str + 1) >= 48 && *(str + 1) <= 57))
+		&& (*(str + 1) >= '0' && *(str + 1) <= '9'))
 	{
 		if (*str == '-')
 			sign = -1;
@@ -31,9 +31,9 @@ static long	str_to_num(const char *str)
 	}
 	while (*str)
 	{
-		if (!(*str >= 48 && *str <= 57) || num == 1844674407370955161)
-			handle_error();
-		num = num * 10 + (*str - 48);
+		if (*str < '0' || *str > '9' || num > INT_MAX || num < INT_MIN)
+			return (LONG_MAX);
+		num = num * 10 + (*str - '0');
 		str++;
 	}
 	return (num * sign);
