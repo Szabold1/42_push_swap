@@ -6,11 +6,10 @@ INCDIR = include
 CFLAGS = -Wall -Wextra -Werror -I$(INCDIR)
 LIBRARY = ../push_swap/libpush_swap.a
 
-SRCS = $(SRCDIR)/get_next_line_utils.c \
-		$(SRCDIR)/get_next_line.c \
-		$(SRCDIR)/main.c \
-
-OBJS = $(SRCS:.c=.o)
+SRC = get_next_line_utils.c \
+		get_next_line.c \
+		main.c
+OBJS = $(SRC:%.c=$(SRCDIR)/%.o)
 
 %.o : %.c
 	$(CC) $(CFLAGS) -c $< -o $@
