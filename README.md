@@ -65,7 +65,7 @@ Sort 100 integers and display the number of swaps:
 ./push_swap -517 -427 209 182 762 -680 -108 860 -262 -44 748 -829 -686 642 -397 170 -24 -237 -813 -2 -864 968 -41 400 -344 457 765 528 581 -353 568 848 689 320 27 76 -504 282 -29 -537 604 -703 -960 254 -681 749 897 -425 -837 -240 -935 -934 -738 -546 159 799 -763 46 357 625 153 21 525 442 -323 235 786 707 978 -857 533 933 -895 -737 447 -134 -854 -707 -266 -688 938 -664 -480 -426 -907 -236 -247 643 -971 -218 -278 325 -584 -725 833 219 742 439 165 576 | wc -l
 ```
 
-**Using Checker**
+#### Using Checker
 
 After running `checker` with the specified integers as arguments, input the necessary operations to sort the integers. For example:
 
