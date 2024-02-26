@@ -3,6 +3,7 @@
 <p align="center">
   <a href="#about">About</a> &#xa0; | &#xa0;
   <a href="#rules">Rules</a> &#xa0; | &#xa0;
+  <a href="#bonus">Bonus</a> &#xa0; | &#xa0;
   <a href="#usage">Usage</a> &#xa0; | &#xa0;
   <a href="#allowed-functions">Allowed functions</a> &#xa0; | &#xa0;
   <a href="https://github.com/Szabold1" target="_blank">Author</a>
@@ -12,7 +13,7 @@
 
 ## About
 
-This project, named Push Swap, is a simple yet challenging algorithm task where the goal is to sort a set of integer values using two stacks and a defined set of instructions. The objective is to create a program in C called `push_swap` that generates the smallest possible sequence of instructions in the Push Swap language to sort the integers provided as arguments.
+This project is a simple yet challenging algorithm task where the goal is to sort a set of integer values using two stacks and a defined set of instructions. The objective is to create a program in C called `push_swap` that generates the smallest possible sequence of instructions in the Push Swap language to sort the integers provided as arguments.
 
 ## Rules
 
@@ -36,7 +37,7 @@ This project, named Push Swap, is a simple yet challenging algorithm task where 
 
 In addition to the main `push_swap` program, there is a `bonus` task:
 
-- Checker: a program that validates whether the sorting operations were performed correctly.
+- `Checker`: a program that validates whether the sorting operations were performed correctly.
   - When given a list of integers as arguments, it waits and reads instructions from the standard input.
   - If, after executing the instructions, stack 'a' is sorted in ascending order and stack 'b' is empty, it outputs "OK".
   - If not, it outputs "KO".
