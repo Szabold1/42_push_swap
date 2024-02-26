@@ -6,11 +6,11 @@
 /*   By: bszabo <bszabo@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 10:03:31 by bszabo            #+#    #+#             */
-/*   Updated: 2023/12/18 10:05:10 by bszabo           ###   ########.fr       */
+/*   Updated: 2024/02/26 21:03:12 by bszabo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 // rotate both stacks until cheapest node is at top of stack b
 // or its target is at top of stack a

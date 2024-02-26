@@ -6,11 +6,11 @@
 /*   By: bszabo <bszabo@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 09:59:26 by bszabo            #+#    #+#             */
-/*   Updated: 2023/12/18 10:00:42 by bszabo           ###   ########.fr       */
+/*   Updated: 2024/02/26 21:03:02 by bszabo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 // 1. put input into stack a
 // 2. check if stack a is sorted

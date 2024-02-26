@@ -6,11 +6,11 @@
 /*   By: bszabo <bszabo@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 10:06:13 by bszabo            #+#    #+#             */
-/*   Updated: 2023/12/18 10:07:27 by bszabo           ###   ########.fr       */
+/*   Updated: 2024/02/26 21:03:21 by bszabo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 // sort the three elements in the stack
 static void	sort_three(t_stack **stack_a)

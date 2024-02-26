@@ -6,11 +6,11 @@
 /*   By: bszabo <bszabo@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 10:27:11 by bszabo            #+#    #+#             */
-/*   Updated: 2023/12/18 10:27:54 by bszabo           ###   ########.fr       */
+/*   Updated: 2024/02/26 21:03:52 by bszabo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 // create new node and return it
 t_stack	*stack_new_node(int num)

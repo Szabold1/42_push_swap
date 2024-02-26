@@ -6,11 +6,11 @@
 /*   By: bszabo <bszabo@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 10:13:47 by bszabo            #+#    #+#             */
-/*   Updated: 2023/12/18 10:14:16 by bszabo           ###   ########.fr       */
+/*   Updated: 2024/02/26 21:03:27 by bszabo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 // add new node to end of stack
 void	stack_add_back(t_stack **stack, t_stack *new_node)

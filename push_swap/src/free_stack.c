@@ -6,11 +6,11 @@
 /*   By: bszabo <bszabo@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 09:50:50 by bszabo            #+#    #+#             */
-/*   Updated: 2023/12/18 09:50:59 by bszabo           ###   ########.fr       */
+/*   Updated: 2024/02/26 21:02:34 by bszabo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 void	free_stack(t_stack **stack)
 {

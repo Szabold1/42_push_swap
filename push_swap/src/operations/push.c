@@ -6,11 +6,11 @@
 /*   By: bszabo <bszabo@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 09:39:57 by bszabo            #+#    #+#             */
-/*   Updated: 2023/12/18 09:41:19 by bszabo           ###   ########.fr       */
+/*   Updated: 2024/02/26 21:02:11 by bszabo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/push_swap.h"
+#include "push_swap.h"
 
 // push the first node from src to dest
 static void	push(t_stack **src, t_stack **dest)

@@ -6,11 +6,11 @@
 /*   By: bszabo <bszabo@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 09:52:25 by bszabo            #+#    #+#             */
-/*   Updated: 2023/12/18 09:53:57 by bszabo           ###   ########.fr       */
+/*   Updated: 2024/02/26 21:02:43 by bszabo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 // copy src string to dest string
 static char	*ft_strcpy(char *dest, char *src)

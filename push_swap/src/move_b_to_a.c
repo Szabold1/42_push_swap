@@ -6,11 +6,11 @@
 /*   By: bszabo <bszabo@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 10:01:12 by bszabo            #+#    #+#             */
-/*   Updated: 2023/12/18 10:03:05 by bszabo           ###   ########.fr       */
+/*   Updated: 2024/02/26 21:03:06 by bszabo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 // set target for each node in stack b
 // target: the closest bigger number in stack a

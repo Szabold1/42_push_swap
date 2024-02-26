@@ -6,11 +6,11 @@
 /*   By: bszabo <bszabo@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 09:43:21 by bszabo            #+#    #+#             */
-/*   Updated: 2023/12/18 09:43:51 by bszabo           ###   ########.fr       */
+/*   Updated: 2024/02/26 21:02:20 by bszabo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/push_swap.h"
+#include "push_swap.h"
 
 // Shift up all elements of the stack by one
 // The first element becomes the last one.

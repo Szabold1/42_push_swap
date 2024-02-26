@@ -6,11 +6,11 @@
 /*   By: bszabo <bszabo@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 09:55:02 by bszabo            #+#    #+#             */
-/*   Updated: 2023/12/18 09:58:59 by bszabo           ###   ########.fr       */
+/*   Updated: 2024/02/26 21:02:55 by bszabo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 // convert string to number with error checking
 static long	str_to_num(const char *str)

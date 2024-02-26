@@ -6,11 +6,11 @@
 /*   By: bszabo <bszabo@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 10:22:42 by bszabo            #+#    #+#             */
-/*   Updated: 2023/12/18 10:25:24 by bszabo           ###   ########.fr       */
+/*   Updated: 2024/02/26 21:03:42 by bszabo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 // get node with the smallest number in the stack
 t_stack	*stack_get_min_node(t_stack *stack)

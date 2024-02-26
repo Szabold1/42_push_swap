@@ -6,11 +6,11 @@
 /*   By: bszabo <bszabo@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 09:44:18 by bszabo            #+#    #+#             */
-/*   Updated: 2023/12/18 09:47:30 by bszabo           ###   ########.fr       */
+/*   Updated: 2024/02/26 21:02:24 by bszabo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/push_swap.h"
+#include "push_swap.h"
 
 // swap the first two elements at the top of the stack
 static void	swap_first_two(t_stack **stack)

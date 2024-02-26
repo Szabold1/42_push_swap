@@ -6,11 +6,11 @@
 /*   By: bszabo <bszabo@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 10:05:38 by bszabo            #+#    #+#             */
-/*   Updated: 2023/12/18 10:05:52 by bszabo           ###   ########.fr       */
+/*   Updated: 2024/02/26 21:03:16 by bszabo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 // set indexes and above_middle for nodes in stack
 void	set_node_indexes(t_stack *stack)

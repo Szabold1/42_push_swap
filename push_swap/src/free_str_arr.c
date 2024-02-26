@@ -6,11 +6,11 @@
 /*   By: bszabo <bszabo@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 09:51:28 by bszabo            #+#    #+#             */
-/*   Updated: 2023/12/18 09:51:59 by bszabo           ###   ########.fr       */
+/*   Updated: 2024/02/26 21:02:39 by bszabo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "push_swap.h"
 
 void	free_str_arr(char **arr)
 {
