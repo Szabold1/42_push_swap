@@ -67,7 +67,9 @@ Sort 100 integers and display the number of swaps:
 
 #### Using Checker
 
-After running `checker` with the specified integers as arguments, input the necessary operations to sort the integers. For example:
+After running `checker` with the specified integers as arguments, input the necessary operations to sort the integers.
+
+For example:
 
 ```shell
 ./checker 98 -42 42 0 8
